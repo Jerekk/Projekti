@@ -62,7 +62,18 @@ h1 {
 .read-the-docs {
   color: #888;
 }
+#cards{
+  background-color: black;
+  width: auto;
+}
 
+img{
+  display: block;
+}
+
+figurecaption{
+  color: white;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -71,6 +82,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
