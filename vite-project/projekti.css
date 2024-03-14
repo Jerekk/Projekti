@@ -1,0 +1,164 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+   
+  }
+
+  .box {
+    height: 100px;
+    width: 100px;
+    border: 1px solid white;
+    background-color: black;
+    
+  }
+  nav{
+    display: inline;
+  }
+
+
+  .clear {
+    clear: both;
+  }
+
+
+  main{
+    background-color: white;
+    max-width: 1000px;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px auto 0px;
+
+  }
+
+  footer {
+    height: 40px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    margin-top: 15%;
+    padding-top: 10px;
+    clear: both;
+
+  }
+  
+  li{
+    display: inline;
+    color: white;
+    padding: 10px 10px 10px 10px;
+  }
+
+  ul{
+    background-color: darkblue;
+    padding: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    
+  }
+  .otsikko{
+    font-size: x-large;
+  }
+
+  h2{
+    text-align: center;
+  }
+
+ #kuva{
+  width: 250px;
+  float: left;
+  border: solid black 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+ }
+
+ .kuva1{
+  width: 200px;
+  float: left;
+  padding-right: 10px;
+ }
+ 
+.textbox0{
+  border: solid black 5px;
+  background-image: url(sininentausta.jfif);
+  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+p {
+  color: white;
+}
+
+h1{
+  text-align: center;
+}
+
+.floatingheart{
+  width: 130px;
+  position: absolute;
+  left: 75%;
+  top: -100%;
+  z-index: 100;
+
+}
+/*remove floatingheart and h2*/
+@media screen and (max-width: 950px){
+.header {
+display: none;
+}
+
+@media screen and  (max-width: 500px){
+li{
+display: block;
+}
+}
+  
+
+.login {
+  width: 500px;
+  height: 500px;
+  background-color: black;
+  border: 1px solid white; /* Add a white border for visibility */
+}
+
+}
+
+
+
+
+
+
+.textbox1{
+  max-width: 1000px;
+  background-color: darkblue;
+  border: solid; color: black;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}
+
+.hero {
+ width: 100%;
+ min-height: 300px; /* Set a minimum height to ensure content is visible */
+ background-image: url(GE-HealthCare-2.jpg);
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+}
+
+.header{
+  position: relative;
+}
+  

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning Items</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="projekti.css">
+  </head>
+
+  <body>
+    <main>
+    <!---- Navigation bar ---->
+    <div>
+        <ul>
+            <li class="otsikko"> Health Tech Metropolia</li>
+            <li class="burger"> Home</li>
+            <li class="burger"><a href="http://localhost:5173/projektilogin.html" style="color: white;">Login</a></li>
+            <li class="burger"> Registeration</li>
+          </ul>
+          <section class="hero"> </section>
+      </div>
+
+      <!--Header-->
+    <h2>School of ICT</h2>
+
+
+  <div class="header">
+    <h1>Innovaatioita terveydenhuoltoon</h1>
+    <img class = floatingheart src="sydan.jpg" alt="anatomy heart">
+  </div>
+   <!--Ensimmäinen textboxi-->
+<div class="textbox0">
+  <img class = kuva1 src="cardio.png" alt="cardiogram">
+   <p>
+    Teknologian hyödyntäminen hyvinvointiin ja terveyteen liittyvissä erilaisissa sovelluksissa, palveluissa ja prosesseissa. Hyvinvointi- ja terveysteknologialla tarkoitetaan muun muassa antureita ja anturiverkkoja, mobiili- ja web-sovelluksia ja soveltavaa robotiikkaa. </br>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam iure aspernatur nemo cum. Commodi deserunt voluptate, obcaecati quod suscipit alias a totam nihil beatae eos pariatur dolorum tempora voluptates veniam!
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est itaque praesentium corporis quam, quis voluptates. At, in eaque, et tempora ex natus vel, explicabo ipsa porro repellat voluptatum officiis dolorem! </br>
+    <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus aliquid fugiat culpa repudiandae omnis tempore nulla accusantium veniam animi eius ab a necessitatibus rerum sed labore et, qui suscipit sequi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi veniam pariatur ex fuga quis voluptatum quisquam unde dolore animi voluptates ea, non nostrum consequuntur accusamus fugiat, eum assumenda qui natus.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia vero, impedit itaque, aut, fuga quasi aperiam libero veritatis fugit rem laudantium dolore accusamus perspiciatis voluptates. Incidunt itaque laudantium assumenda? Impedit.
+    <br> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eaque, optio, voluptate ipsa modi autem exercitationem quibusdam porro aut, suscipit earum quod id repudiandae nisi natus aliquam rerum ut nemo. </br>
+    <br> Työtehtäviä ovat mm. teknologian kehitys-, myynti-, markkinointi-, asiakaspalvelu-, asiantuntija- ja projektitehtävät yksityisellä sektorilla ja asiantuntijatehtävät julkisella sektorilla. Hyvinvointi- ja terveysteknologiaan erikoistuneita insinöörejä työskentelee mm. laitteita, järjestelmiä, ohjelmistoja ja palveluita kehittävissä sekä terveyspalveluita tarjoavissa yrityksissä.
+</p>
+</div> 
+
+
+
+
+<div class="textbox1" id = "target">
+
+  <p>Selaimen kieli: ${browserLanguage}</p>
+      <p>Näytön leveys ja korkeus: ${screenWidth} x ${screenHeight}</p>
+      <p>Selaimen leveys ja korkeus: ${windowWidth} x ${windowHeight}</p>
+      <p>Nykyinen päivämäärä: ${formattedDate}</p>
+      <p>Kello: ${formattedTime}</p>
+
+    </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Haetaan tarvittavat tiedot BOM:in avulla
+        const browserLanguage = navigator.language;
+        const screenWidth = window.screen.width;
+        const screenHeight = window.screen.height;
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+  
+        const currentDate = new Date();
+        const formattedDate = currentDate.toLocaleDateString('fi-FI', {
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        });
+  
+        const formattedTime = currentDate.toLocaleTimeString('fi-FI', {
+            hour: 'numeric',
+            minute: 'numeric'
+        });
+  
+        const targetElement = document.getElementById('target');
+        targetElement.innerHTML = `
+            <p>Selaimen kieli: ${browserLanguage}</p>
+            <p>Näytön leveys ja korkeus: ${screenWidth} x ${screenHeight}</p>
+            <p>Selaimen leveys ja korkeus: ${windowWidth} x ${windowHeight}</p>
+            <p>Nykyinen päivämäärä: ${formattedDate}</p>
+            <p>Kello: ${formattedTime}</p>
+        `;
+    });
+  </script>
+  
+
+</div>
+
+<footer>Copyright meitsi</footer>
+</body>
+
+</html>

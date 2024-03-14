@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="projektilogin.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation bar -->
+        <div class="navigationbar">
+            <ul>
+                <li class="otsikko"> HealthDiary</li>
+                <li class="burger"> Home</li>
+                <li class="burger"><a href="http://localhost:5173/projektilogin.html" style="color: white;">Login</a></li>
+                <li class="burger"> Registration</li>
+                <li class="user">Hei kirjautunut käyttäjä: <span id="name">NIMI TÄHÄN</span>!</li>
+            </ul>
+        </div>
+
+
+  <div class="flex_container2">
+
+            <button style="display: none;" class="get_entry">Hae (user:1) entries</button>
+        
+    
+
+    <div>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>User Level</th>
+          <th>Info</th>
+          <th>Delete</th>
+          <th>ID</th>
+          <th>Entries</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <!-- tänne haetaan kaikki käyttäjät -->
+        <!-- # Get all users -->
+        <!-- GET http://127.0.0.1:3000/api/users -->
+      </tbody>
+    </table>
+
+    <button class="get_users">Hae users tiedot</button>
+
+
+  <div>
+    <form class="update_user_form">
+      <h3 style="margin: 10px; margin-left: 0; padding: 5px; background-color: #333;">Update your username, email or password</h3>
+      <label for="username">Username</label><br>
+      <input style="color:black;" type="text" name="username" placeholder="Your new username" required /><br>
+      <label for="password">Password</label><br>
+      <input style="color:black;" type="password" name="password" placeholder="Your new password" required /><br>
+      <label for="email">Email</label><br>
+      <input style="color:black;" type="email" name="email" placeholder="Your new email" required /><br>
+      <input style="color:black;" type="submit" value="Update" class="updateuser" /><br>
+    </form>
+  </div>
+</div>
+
+<dialog class="info_dialog">
+  <p>
+    <!-- tänne haetaan yksittäinen valittu käyttäjät -->
+    <!-- <div>UserID: <span>Id</span></div>
+    <div>UserName: <span>Username</span></div>
+    <div>Email: <span>Email</span></div>
+    <div>Role: <span>Role</span></div>  -->
+  </p>
+  <button autofocus>Close</button>
+</dialog>
+
+
+
+<div class="flex_container3">
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>Mood</th>
+        <th>Notes</th>
+        <th>Slept hour</th>
+        <th>Weight</th>
+      </tr>
+    </thead>
+  <tbody class="tbody2">
+    
+  </tbody>
+</table>
+  <form>
+    <h3>New Diary Entry</h3>
+    <label  for="mood">Select your mood (Happy, Sad, Exited, Anxious)</label><br>
+    <select style="color: #333;" name="mood">
+      <option style="color: black;" value="">selct you mood</option>
+
+      <option style="color: black;" value="Sad">Sad</option>
+      <option style="color: black;" value="Excited">Excited</option>
+      <option style="color: black;" value="Anxious">Anxious</option>
+    </select>    
+    <br>
+      <label for="Notes">Notes (Write an description of you day.)</label><br>
+      <label for="notes">Notes about your day</label><br>
+<textarea style="color:black; width: 500px; height: 100px;" name="notes" placeholder="Write down notes about your day" required></textarea><br>
+      <label for="slept_hours">Slept hours</label><br>
+      <select style="color: #333;" name="slept_hours" required>
+        <!-- <option style="color: black;" value="" disabled selected>How many hours did you sleep</option> -->
+        <option style="color: black;" value="4">Less than 4 hours</option>
+        <option style="color: black;" value="5">4-5 hours</option>
+        <option style="color: black;" value="6">5-6 hours</option>
+        <option style="color: black;" value="7">6-7 hours</option>
+        <option style="color: black;" value="8">7-8 hours</option>
+        <option style="color: black;" value="9">8-9 hours</option>
+        <option style="color: black;" value="10">More than 9 hours</option>
+      </select><br>
+      <input style="color:black;" type="submit" value="Update" class="updateuser" /><br>
+  </form>
+</div>
+
+
+  
+
+    </main>
+    <footer>Copyright meitsi</footer>
+    <script type="module" src="./projektidiary.js"></script>
+</body>
+</html>
