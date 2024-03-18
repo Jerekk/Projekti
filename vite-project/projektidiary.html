@@ -16,6 +16,7 @@
                 <li class="burger"><a href="http://localhost:5173/projektilogin.html" style="color: white;">Login</a></li>
                 <li class="burger"> Registration</li>
                 <li class="user">Hei kirjautunut käyttäjä: <span id="name">NIMI TÄHÄN</span>!</li>
+                <li style="float: right" class="active logout"><a href="projektilogin.html">Logout</a></li>
             </ul>
         </div>
 
@@ -89,32 +90,47 @@
     
   </tbody>
 </table>
-  <form>
-    <h3>New Diary Entry</h3>
-    <label  for="mood">Select your mood (Happy, Sad, Exited, Anxious)</label><br>
+  <form class="postEntry">
+    <h3 style="background-color: #333; max-width: 500px; padding: 10px;">New Diary Entry</h3>
+    <label for="mood">Select your mood (Happy, Sad, Exited, Anxious)</label><br>
     <select style="color: #333;" name="mood">
       <option style="color: black;" value="">selct you mood</option>
-
+      <option style="color: black;" value="Happy">Happy</option>
       <option style="color: black;" value="Sad">Sad</option>
       <option style="color: black;" value="Excited">Excited</option>
       <option style="color: black;" value="Anxious">Anxious</option>
+      <option style="color: black;" value="On the Edge">On the Edge</option>
     </select>    
     <br>
       <label for="Notes">Notes (Write an description of you day.)</label><br>
-      <label for="notes">Notes about your day</label><br>
-<textarea style="color:black; width: 500px; height: 100px;" name="notes" placeholder="Write down notes about your day" required></textarea><br>
+      
+      <textarea style="color:black; width: 500px; height: 100px;" name="notes" placeholder="Write down notes about your day" required></textarea><br>
+
       <label for="slept_hours">Slept hours</label><br>
       <select style="color: #333;" name="slept_hours" required>
         <!-- <option style="color: black;" value="" disabled selected>How many hours did you sleep</option> -->
-        <option style="color: black;" value="4">Less than 4 hours</option>
-        <option style="color: black;" value="5">4-5 hours</option>
-        <option style="color: black;" value="6">5-6 hours</option>
-        <option style="color: black;" value="7">6-7 hours</option>
-        <option style="color: black;" value="8">7-8 hours</option>
-        <option style="color: black;" value="9">8-9 hours</option>
-        <option style="color: black;" value="10">More than 9 hours</option>
+        <option style="color: black;" value="1">1 hour</option>
+        <option style="color: black;" value="2">2 hours</option>
+        <option style="color: black;" value="3">3 hours</option>
+        <option style="color: black;" value="4">4 hours</option>
+        <option style="color: black;" value="5">5 hours</option>
+        <option style="color: black;" value="6">6 hours</option>
+        <option style="color: black;" value="7">7 hours</option>
+        <option style="color: black;" value="8">8 hours</option>
+        <option style="color: black;" value="9">9 hours</option>
+        <option style="color: black;" value="10">10 hours</option>
+        <option style="color: black;" value="11">11 hours</option>
+        <option style="color: black;" value="12">12 hours</option><br>
       </select><br>
-      <input style="color:black;" type="submit" value="Update" class="updateuser" /><br>
+    <label for="weight">How much did you weigh today?</label><br>
+    
+    <input style="color: black;" type="number" name="weight" placeholder="Enter your weight in kilograms" required><br>
+    <label for="date">Select the date for this entry.</label><br>
+    <input style="color: black;" class="date" type="date"><br>
+    
+
+        
+        <input style="color:black;" type="submit" value="Create new diary entrie!" class="createEntry" /><br>
   </form>
 </div>
 

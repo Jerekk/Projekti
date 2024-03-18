@@ -152,7 +152,10 @@ footer {
   flex-direction: column;
   width: 1000px;
 }
-
+.createEntry{
+  margin: 10px;
+  margin-left: 0;
+}
 /* .flex_container2 {
   display: flex;
   flex-direction: row;

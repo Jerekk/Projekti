@@ -1,5 +1,5 @@
 import './styleaught.css';
-import { fetchData } from './fetch.js';
+import { fetchData } from '../fetch.js';
 
 // haetaan nappi josta lähetetään formi ja luodaan käyttäjä
 const createUser = document.querySelector('.create_user');

@@ -4,6 +4,7 @@ import { fetchData } from "./fetch.js";
 // Retrieve the value from localStorage
 const aloitususername = localStorage.getItem('username');
 
+
 // Select the HTML element where you want to print the value
 const usernameElement = document.getElementById('name');
 
@@ -239,6 +240,73 @@ function createTable2(data) {
   });
 }
 
+//Post funktio
+
+async function postEntries(evt) {
+  // Post the entry using the user-id-data attribute
+
+  evt.preventDefault(); // Prevent form submission from refreshing the page
+
+  console.log('Nyt postataan');
+  const id = localStorage.getItem('userID');
+  const url = `http://127.0.0.1:3000/api/entries/${id}`;
+
+  const form = document.querySelector('.postEntry');
+  const mood = form.querySelector('select[name="mood"]').value;
+  const notes = form.querySelector('textarea[name="notes"]').value;
+  const sleptHours = form.querySelector('select[name="slept_hours"]').value;
+  const weight = form.querySelector('input[name="weight"]').value;
+  const date = form.querySelector('input[name="date"]').value;
+  console.log('moi');
+
+  console.log(mood, notes, sleptHours, weight, date);
+
+  const data = {
+    "user_id": id,
+    "entry_date": date,
+    "mood": mood,
+    "weight": weight,
+    "sleptHours": sleptHours,
+    "notes": notes
+  }
+
+  // {
+  //   "user_id": 123,
+  //   "entry_date": "2024-03-16",
+  //   "mood": "Happy",
+  //   "weight": 70.5,
+  //   "sleep_hours": 8,
+  //   "notes": "Feeling great today!"
+  // }
+  
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data), 
+  };
+
+  try {
+    const response = await fetch(url, options);
+    console.log(response);
+    console.log('täsäollaa res');
+    const postData = await response.json(); // assuming the response is JSON
+    console.log(postData);
+    alert('Entry sent successfully');
+
+  } 
+    catch (error) {
+    console.error('Error posting entry:', error);
+    alert('Error');
+  }
+}
+
+// Assuming postEntries is a form submission handler, you can attach it to the form's submit event
+const form = document.querySelector('.postEntry');
+form.addEventListener('submit', postEntries);
+
 
 
 async function deleteUser(evt) {
@@ -253,13 +321,6 @@ async function deleteUser(evt) {
   const id2 = evt.target.parentElement.nextElementSibling.textContent;
   console.log('Toinen tapa: ', id2);
 
-  // <tr>
-  //   <td>Melissa</td>
-  //   <td>5150</td>
-  //   <td><button class="check" data-id="2">Info</button></td>
-  //   <td><button class="del" data-id="2">Delete</button></td>
-  //   <td>2</td>
-  // </tr>
 
   const url = `http://127.0.0.1:3000/api/users/${id}`;
   let token = localStorage.getItem('token');
@@ -281,14 +342,14 @@ async function deleteUser(evt) {
 
 // logataan ulos kjun painetaan logout nappulaa
 
-// document.querySelector('.logout').addEventListener('click', logOut);
+document.querySelector('.logout').addEventListener('click', logOut);
 
-// function logOut(evt) {
-//   evt.preventDefault();
-//   localStorage.removeItem('token');
-//   console.log('logginout');
-//   window.location.href = 'index.html';
-// }
+function logOut(evt) {
+  evt.preventDefault();
+  localStorage.removeItem('token');
+  console.log('logginout');
+  window.location.href = 'projektilogin.html';
+}
 
 
 //PUT

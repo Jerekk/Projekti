@@ -94,6 +94,7 @@ loginUser.addEventListener('click', async (evt) => {
     console.log(data.user.username);
     localStorage.setItem('token', data.token);
     localStorage.setItem('username', data.user.username);
+    localStorage.setItem('userID', data.user.user_id);
     
 
     //fetch.js palauttaa BE puolen validointivirheen
