@@ -39,6 +39,8 @@ password: User's password, which cannot be empty and has a maximum length of 255
 email: User's email address, which cannot be empty and is unique for each user.
 created_at: Timestamp indicating when the user account was created.
 user_level: User's level, defaulting to 'regular.'
+
+
 DiaryEntries:
 
 This table stores diary entries made by users, including date, mood, weight, sleep duration, and notes.
@@ -51,6 +53,8 @@ weight: User's weight on the entry date.
 sleep_hours: Number of hours slept by the user on the entry date.
 notes: Free-form notes.
 created_at: Timestamp indicating when the entry was created.
+
+
 Nutrition:
 
 This table stores information about users' daily nutrition intake.
@@ -61,6 +65,8 @@ entry_date: Date of the nutrition entry.
 number_of_meals: Total number of meals consumed by the user on the entry date.
 description: Description of the meals consumed, including meal types.
 created_at: Timestamp indicating when the nutrition entry was created.
+
+
 Fitness:
 
 This table stores information about fitness activities performed by users.
