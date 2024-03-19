@@ -8,14 +8,14 @@ Home page:
 
 Web Application Functionalities:
 
-Login
-Registration
-After Login:
-Get all users
-Get specific users' entries
-Info function that shows user information (Username, Password, and Email)
-Change Username, Password, or Email (PUT)
-Planned but Not Implemented:
+- Login
+- Registration
+- After Login:
+- Get all users
+- Get specific users' entries
+- Info function that shows user information (Username, Password, and Email)
+- Change Username, Password, or Email (PUT)
+- Planned but Not Implemented:
 
 Creating new diary entries
 Bugs:
