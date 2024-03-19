@@ -15,9 +15,11 @@ Web Application Functionalities:
 - Get specific users' entries
 - Info function that shows user information (Username, Password, and Email)
 - Change Username, Password, or Email (PUT)
-- Planned but Not Implemented:
+  
+Planned but Not Implemented:
+- Creating new diary entries
 
-Creating new diary entries
+  
 Bugs:
 
 Encountered difficulties with posting new entries to the database. The problem was in the entry router, but I couldn't resolve it. The farthest I got was receiving an alert message when attempting to send the new entry, but the console displayed a 404 error with the URL. Thus, there was a backend problem that I couldn't fix.
