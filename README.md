@@ -23,6 +23,8 @@ Planned but Not Implemented:
 Bugs:
 
 Encountered difficulties with posting new entries to the database. The problem was in the entry router, but I couldn't resolve it. The farthest I got was receiving an alert message when attempting to send the new entry, but the console displayed a 404 error with the URL. Thus, there was a backend problem that I couldn't fix.
+
+
 Database Description:
 
 The "HealthDiary" database consists of four main tables: "Users," "DiaryEntries," "Nutrition," and "Fitness," which store user information, diary entries, nutrition details, and fitness details for a health diary.
